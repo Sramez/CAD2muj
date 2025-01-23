@@ -1,0 +1,15 @@
+Mon Jan 13 12:33:01 2025
+ERROR: could not create window
+
+Mon Jan 13 12:33:10 2025
+ERROR: could not create window
+
+Mon Jan 13 12:34:17 2025
+ERROR: could not create window
+
+Mon Jan 13 12:34:27 2025
+ERROR: could not create window
+
+Wed Jan 22 22:15:03 2025
+WARNING: Insufficient arena memory for the number of constraints generated. Increase arena memory allocation above 16M bytes. Time = 0.7000.
+
