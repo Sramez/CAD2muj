@@ -1,0 +1,13 @@
+<mujoco model="test">
+  <worldbody>
+    <replicate count="2" offset="0 1 0" euler="90 0 0">
+      <replicate count="2" sep="-" offset="1 0 0" euler="0 90 0">
+        <geom name="Alice" size=".1"/>
+      </replicate>
+    </replicate>
+  </worldbody>
+
+  <sensor>
+    <accelerometer name="Bob" site="Alice"/>
+  </sensor>
+</mujoco>

@@ -1,5 +1,12 @@
+#%%
 from dm_control import mjcf
-from mujoco import MjSim, MjViewer
+import mujoco.viewer
+import mujoco
+#from mujoco import MjSim, MjViewer
+mjcf_model = mjcf.RootElement()
+print(mjcf_model)
+mujoco.viewer.launch(mjcf_model)
+#%%
 
 # Create a new MJCF model
 model = mjcf.RootElement()
@@ -13,15 +20,11 @@ dynamic_body.add('joint', name='free_joint', type='free')
 dynamic_body.add('geom', type='sphere', size=[0.1], rgba=[0.2, 0.6, 0.8, 1])
 
 # Compile the MJCF model into a simulation-ready model
-physics = mjcf.Physics.from_mjcf_model(model)
+#physics = mjcf.Physics.from_mjcf_model(model)
 
 # Create a simulation instance
-sim = MjSim(physics.model)
+mujoco.viewer.launch(model)
 
-# Visualize the simulation
-viewer = MjViewer(sim)
 
-# Run the simulation
-while True:
-    sim.step()
-    viewer.render()
+
+# %%
